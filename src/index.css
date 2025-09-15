@@ -1,1 +1,18 @@
 @import "tailwindcss";
+/* cross-browser hide scrollbar while keeping scroll behavior */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}
